@@ -23,55 +23,59 @@
   <main>
     <section class="sec-files-in-one-loc">
       <div class="curvy">
-        <img class="img-curvy">
+        <img class="img-curvy" alt="Background image that has a wavy appearance">
         </div>
       <div class="files-content">
-        <img class="img-people-stuffing-files">
+        <img class="img-people-stuffing-files" alt="A cartoon image of two people putting files in a folder">
         <h1 class="center">All your files in one secure location, accessible anywhere.</h1>
         <p class="desc-text center">Fylo stores all your most important files in one secure location. Access them wherever 
           you need, share and collaborate with friends family, and co-workers.</p>
         <button class="btn-call-to-action small-width">Get Started</button>
       </div>
     </section>
-    <section class="sec-benefits files">
-      <img class="icon-computer">
-      <h2 class="center">Access your files, anywhere</h2>
-      <p class="desc-text center">The ability to use a smartphone, tablet, or computer to access your account means your 
-        files follow you everywhere.</p>
-    </section>
-    <section class="sec-benefits security">
-      <img class="icon-shield">
-      <h2 class="center">Security you can trust</h2>
-      <p class="desc-text center">2-factor authentication and user-controlled encryption are just a couple of the security 
-        features we allow to help secure your files.</p>
-    </section>
-    <section class="sec-benefits collaboration">
-      <img class="icon-people">
-      <h2 class="center">Real-time collaboration</h2>
-      <p class="desc-text center">Securely share files and folders with friends, family and colleagues for live collaboration. 
-        No email attachments required.</p>
-    </section>
-    <section class="sec-benefits store">
-      <img class="icon-store">
-      <h2 class="center">Store any type of file</h2>
-      <p class="desc-text center">Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all 
-        file types to be securely stored and shared.</p>
+    <section class="sec-benefits-hero">
+      <div class="sec-benefits files">
+        <img class="icon-computer" alt="Icon of a computer and a cell phone">
+        <p class="caption-text center">Access your files, anywhere</p>
+        <p class="desc-text center">The ability to use a smartphone, tablet, or computer to access your account means your 
+          files follow you everywhere.</p>
+      </div>
+      <div class="sec-benefits security" alt="Icon of a sheild">
+        <img class="icon-shield">
+        <p class="caption-text center">Security you can trust</p>
+        <p class="desc-text center">2-factor authentication and user-controlled encryption are just a couple of the security 
+          features we allow to help secure your files.</p>
+      </div>
+      <div class="sec-benefits collaboration" alt="Icon of a team of people">
+        <img class="icon-people">
+        <p class="caption-text center">Real-time collaboration</p>
+        <p class="desc-text center">Securely share files and folders with friends, family and colleagues for live collaboration. 
+          No email attachments required.</p>
+      </div>
+      <div class="sec-benefits store" alt="Icon of a folder with files in it">
+        <img class="icon-store">
+        <p class="caption-text center">Store any type of file</p>
+        <p class="desc-text center">Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all 
+          file types to be securely stored and shared.</p>
+      </div>
     </section>
     <section class="sec-productivity">
-      <img class="img-productivity">
-      <h2 class="center">Stay productive, wherever you are</h2>
-      <p class="desc-text">
-        Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
-        storage needs.
-        <br/>
-        <br/>
-        Securely share files and folders with friends, family and colleagues for live collaboration. No email 
-  attachments required.
-      </p>
-      <button class="btn-how-it-works">See how Fylo works <img class="icon-arrow"></button>
+      <img class="img-productivity" alt="A cartoon image of three people being productive">
+      <div class="productivity-body">
+        <h2>Stay productive, wherever you are</h2>
+        <p class="desc-text">
+          Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
+          storage needs.
+          <br/>
+          <br/>
+          Securely share files and folders with friends, family and colleagues for live collaboration. No email 
+    attachments required.
+        </p>
+        <button class="btn-how-it-works">See how Fylo works <img class="init-arrow"><img class="hover-arrow"></button>
+      </div>
     </section>
     <section class="sec-testimonials">
-      <img class="icon-quote">
+      <img class="icon-quote" alt="Icon of a quotation mark">
       <div class="testimonial-card-body">
         <p class="testimonial-quote">
           Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
@@ -122,33 +126,41 @@
     </section>
     <section class="sec-sign-up-prompt">
       <div class="prompt-card-body">
-       <h2 class="center">Get early access today</h2>
+       <h3 class="center">Get early access today</h3>
        <p class="desc-text center">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
         questions, our support team would be happy to help you.</p>
-        <input type="text" class="prompt-email" placeholder="email@example.com"/>
-        <button class="btn-call-to-action">Get Started For Free</button>
+        <form id="email-form" class="email-form">
+          <div class="email-input-container">
+            <input id="email-input" type="text" class="prompt-email" placeholder="email@example.com"/>
+            <p id="email-error" class="error-text"></p>
+            <p id="email-success" class="success-text"></p>
+          </div>
+          <button class="btn-call-to-action">Get Started For Free</button>
+        </form>
       </div>
     </section>
   </main>
   <footer>
-    <div class="footer-body">
+    <div class="footer-container">
       <img class="img-brand-logo" alt="Fylo logo">
-      <section class="sec-contact-us">
-        <div class="grp-location">
-          <img class="icon-location">
-          <p class="contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-            dolore magna aliqua</p>
+      <div class="footer-body">
+        <div class="sec-contact-us">
+          <div class="grp-location">
+            <img class="icon-location">
+            <p class="contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+              dolore magna aliqua</p>
+          </div>
         </div>
-        <div class="grp-phone">
-          <img class="icon-phone">
-          <p class="contact-text">+1-543-123-4567</p>
+        <div class="contact-us-phone-email">
+          <div class="grp-phone">
+            <img class="icon-phone" alt="Phone icon">
+            <p class="contact-text">+1-543-123-4567</p>
+          </div>
+          <div class="grp-email">
+            <img class="icon-email" alt="Email icon">
+            <p class="contact-text">example@fylo.com</p>
+          </div>
         </div>
-        <div class="grp-email">
-          <img class="icon-email">
-          <p class="contact-text">example@fylo.com</p>
-        </div>
-      </section>
-      <section class="sec-other-links">
         <ul class="list-other-site-pages-1">
           <li><a href="#">About Us</a></li>
           <li><a href="#">Jobs</a></li>
@@ -160,17 +172,52 @@
           <li><a href="#">Terms</a></li>
           <li><a href="#">Privacy</a></li>
         </ul>
-      </section>
-      <section class="sec-socials">
-        <button class="btn-facebook" onclick="window.open('https://www.facebook.com', 'blank');" aria-label="Link to our Facebook page"></button>
-        <button class="btn-twitter" onclick="window.open('https://www.twitter.com', 'blank');" aria-label="Link to our Twitter page"></button>
-        <button class="btn-instagram" onclick="window.open('https://www.instagram.com', 'blank');" aria-label="Link to our Instagram page"></button>
-      </section>
+        <section class="sec-socials">
+          <button class="btn-facebook" onclick="window.open('https://www.facebook.com', 'blank');" aria-label="Link to our Facebook page"></button>
+          <button class="btn-twitter" onclick="window.open('https://www.twitter.com', 'blank');" aria-label="Link to our Twitter page"></button>
+          <button class="btn-instagram" onclick="window.open('https://www.instagram.com', 'blank');" aria-label="Link to our Instagram page"></button>
+        </section>
+      </div>
     </div>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/ianwilk20">Ian Wilkinson</a>.
     </p>
   </footer>
+
+<script>
+  let form = document.getElementById('email-form')
+  let emailInput = document.getElementById('email-input')
+  let emailError = document.getElementById('email-error')
+  let emailSuccess = document.getElementById('email-success')
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if(emailInput.value === "") {
+      emailError.innerText = 'Please enter a valid email address'
+      emailError.classList.add('show-error')
+    } else if (!RegExp(/[^@\s]+@[^@\s]+\.[^@\s]+/gm).test(emailInput.value.toLowerCase())) {
+      emailError.innerText = 'Please enter a valid email address'
+      emailError.classList.add('show-error')
+    } else {
+      emailError.classList.remove('show-error')
+      emailError.innerText = ''
+      setTimeout(function() {
+        completeNotify()
+      }, 500)
+    }
+  });
+
+  function completeNotify() {
+    emailSuccess.classList.add('show-success')
+    emailSuccess.innerText = "Thank you for signing up!"
+    setTimeout(function() {
+      emailSuccess.classList.remove('show-success');
+      emailSuccess.innerText = ''
+      emailInput.value = ''
+    }, 4000)
+  }
+
+</script>
 </body>
 </html>

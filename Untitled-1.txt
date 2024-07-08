@@ -1,0 +1,3 @@
+Making the class="sec-files-in-one-loc" position relative messes up the sizing
+of the curvy thing I need to somehow let the curvy div take up the entire space
+of the class="sec-files-in-one-loc" section Delete after done

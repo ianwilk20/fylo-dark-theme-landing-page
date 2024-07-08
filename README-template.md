@@ -14,9 +14,6 @@ This is a solution to the [Fylo dark theme landing page challenge on Frontend Me
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -29,20 +26,17 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+Desktop:
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![Desktop initial state](/design/sol-desktop-init.png)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+Mobile: 
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Mobile initial state](/design/sol-mobile-init.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Live Site URL](https://fylo-landing-page-ianwilk20.netlify.app/design/)
 
 ## My process
 
@@ -53,59 +47,54 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+An alternative way to create a modal. I saw the obvious way to implement the "Get early access today" modal, by making an absolutely positioned element and tinkering with the testimonials and footer sections in a way for the modal to not cover that content (using margin/padding). To save me trouble of determining the right margin/padding for an absolute positioned element for different screen sizes I tried another approach to design the modal. I created a modal-like appearance and had it follow the flow of the page rather than removed from the flow like absolute positioned elements. I was able to accomplish this by reusing the card from the testimonials section and wrapping it in a container that has a background color split between the lighter blue main color and the darker blue footer color. For the elevated look of typical modals, I gave the card a box-shadow.
 
-To see how you can add code snippets, see below:
+How to use a button hover state to trigger a change in another element. For example, the "See how Fylo works" button has an image of an arrow nested inside of it. I wanted the svg of the arrow to change (between a cyan and a white arrow) when the button was hovered. A solution to this, I learned, is to nest both images in the button but the one that will appear when the button is hovered will initally have a display of none. When the button is hovered, the hidden image will have a display of block and the inital image will be hidden. Here's how it looks in code:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
+```CSS
+.btn-how-it-works:hover {
+    color: var(--white);
+    border-bottom: var(--white) 1px solid;
+}
+
+.btn-how-it-works:hover .hover-arrow {
+    display: inline-block;
+}
+
+.btn-how-it-works:hover .init-arrow {
+    display: none;
+}
+
+.init-arrow,
+.hover-arrow {
+    transform: translateY(0.25rem);
+    padding-left: 0.2rem;
+}
+
+.init-arrow {
+    content: url('../images/icon-arrow.svg');
+}
+
+.hover-arrow {
+    display: none;
+    content: url('../images/icon-arrow-white.svg');
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Something that could benefit my CSS is following the BEM naming conventions. At the moment, I gravitate towards naming an elements CSS class based on what it looks like, ex. ```.btn-how-it-works``` is a button with a label "How it works", or what the elements purpose is, ex. ```.img-user-bruce``` is an image tag that for Bruce's profile. Standardizing the
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Change an image on hover of an element](https://stackoverflow.com/a/66944264) - This helped me figure out how to use a button hover state to trigger a change in which arrow color is displayed in another element.
+- [Transition CSS Property](https://developer.mozilla.org/en-US/docs/Web/CSS/transition) - I read this article to understand how to use the transition property.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- GitHub - [ianwilk20](https://github.com/ianwilk20)

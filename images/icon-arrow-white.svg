@@ -1,0 +1,18 @@
+<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <circle id="b" cx="6" cy="6" r="6"/>
+  <filter x="-25%" y="-25%" width="150%" height="150%" filterUnits="objectBoundingBox" id="a">
+   <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+  </filter>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <g fill="none" fill-rule="evenodd" id="svg_1">
+   <g id="svg_2">
+    <use fill="#000" filter="url(#a)" xlink:href="#b" y="2" x="2" id="svg_3"/>
+    <use fill="#FFFFFF" xlink:href="#b" y="2" x="2" id="svg_4"/>
+   </g>
+   <path d="m8.582,6l-0.363,0.35l1.452,1.4l-4.338,0l0,0.5l4.338,0l-1.451,1.4l0.363,0.35l2.074,-2l-2.075,-2z" fill="#1B2330" id="svg_5"/>
+  </g>
+ </g>
+</svg>
